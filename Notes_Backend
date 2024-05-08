@@ -1,0 +1,9 @@
+Next js is a full stack frameWork. It can handle both frontend and backend. 
+Benefits: 
+Single codebase for all your codebase
+No cors issues, single domain name for your FE and BE
+Ease of deployment, deploy a single codebase
+
+Data Fetching in react is very time consuming and too many requests are used to fetch data. 
+To make it better next js uses a differant wat of data fetching.
+* fetch the user details on the server side and pre-render the page before returning it to the user.
