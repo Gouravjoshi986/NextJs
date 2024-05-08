@@ -12,3 +12,6 @@ In next you can make a component async and do async operations in it.
 * By doing this the flow of your programs becomes as if the browser sent a request to nextjs server and next js did a simultaneous request to backend got the data and rendered it on next js server and gave the file to browser.   THIS IS SERVER SIDE RENDERING. 
 
 * Loader in next js = when the async call is happening and the server is busy nothing will load at that time. At that time we have to show a loader and the way to show a loader is adding a loading.tsx file in the app root directory. 
+
+# For creating Backend. The route must be created in a folder called api inside the app folder of root directory.    app->api->routeName[eg. user/admin/map etc]->route.ts  
+It would be a ts file and not a tsx file. 
