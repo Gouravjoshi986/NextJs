@@ -7,3 +7,8 @@ Ease of deployment, deploy a single codebase
 Data Fetching in react is very time consuming and too many requests are used to fetch data. 
 To make it better next js uses a differant wat of data fetching.
 * fetch the user details on the server side and pre-render the page before returning it to the user.
+In next you can make a component async and do async operations in it. 
+
+* By doing this the flow of your programs becomes as if the browser sent a request to nextjs server and next js did a simultaneous request to backend got the data and rendered it on next js server and gave the file to browser.   THIS IS SERVER SIDE RENDERING. 
+
+* Loader in next js = when the async call is happening and the server is busy nothing will load at that time. At that time we have to show a loader and the way to show a loader is adding a loading.tsx file in the app root directory. 
