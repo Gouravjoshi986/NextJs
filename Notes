@@ -32,3 +32,9 @@ Any component or code that you add in layout will render along all the pages tha
 
 For adding components along a specific route create a layout.tsx file in that route folder and add component.  
 * Adding a layout to root directory will result in it being added to every page. 
+
+# Merging Routes
+What if you wan’t to get the banner in both signup and signin? 
+* You can either do this by creating a folder auth and putting sign up and sign in inside it and add a layout.tsx in the auth folder. But this will affect the route and make it auth/signup.    
+* Better approach would be to create a folder with *(auth)* Parenthesis outside it. This will tell the router to ignore this folder and not include it in route.The routes will remain as 
+ /signup.
