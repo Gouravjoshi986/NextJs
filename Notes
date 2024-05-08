@@ -38,3 +38,20 @@ What if you wan’t to get the banner in both signup and signin?
 * You can either do this by creating a folder auth and putting sign up and sign in inside it and add a layout.tsx in the auth folder. But this will affect the route and make it auth/signup.    
 * Better approach would be to create a folder with *(auth)* Parenthesis outside it. This will tell the router to ignore this folder and not include it in route.The routes will remain as 
  /signup.
+
+COMPONENTS DIRECTORY = 
+* You should put all your components in a components directory and use them in the app routes rather than shoving everything in the route handler
+
+# Client Components and Server Components 
+NextJS expects you to identify all your components as either client or server
+As the name suggests
+Server components are rendered on the server
+Client components are pushed to the client to be rendered
+By default, all components are server components.
+
+* Created by writing *"use client"* on top of the component. 
+
+* When should you create client components ?
+Whenever you get an error that tells you that you need to create a client component
+Whenever you’re using something that the server doesn’t understand (useEffect, useState, onClick…)
+Rule of thumb is to defer the client as much as possible
