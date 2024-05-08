@@ -24,3 +24,11 @@ Very opinionated, very hard to move out of it
 # File Based Router 
 * next js uses file based router eg. the way you create files and folders decides how will a route be created.   eg in the app main directory there is a page.tsx by default which is the page which renders at home or / page. 
 * if a folder called signup is created and a new page.tsx is created there then the /signup route will be created and the page.tsx will be rendered there 
+
+
+You’ll notice a file in your app folder called layout.tsx
+Layouts let you wrap all child pages inside some logic. 
+Any component or code that you add in layout will render along all the pages that comes under that route.
+
+For adding components along a specific route create a layout.tsx file in that route folder and add component.  
+* Adding a layout to root directory will result in it being added to every page. 
