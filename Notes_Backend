@@ -21,3 +21,8 @@ getUserDetails runs on the server. This means you’re sending a request from a 
 # So we will define the route to send the db request direcctly beside the async component. 
 
 # IMPORTANT = When you are fetching and frontend and backend code is in same page then you must not use client component for safety purpose else your backend will run with your front end page.  eg. Use server components only. 
+
+Prisma Singleton: 
+In development, the command next dev clears Node.js cache on run. This in turn initializes a new PrismaClient instance each time due to hot reloading that creates a connection to the database. This can quickly exhaust the database connections as each PrismaClient instance holds its own connection pool.
+
+The solution in this case is to instantiate a single instance PrismaClient and save it on the globalThis object. Then we keep a check to only instantiate PrismaClient if it's not on the globalThis object otherwise use the same instance again if already present to prevent instantiating extra PrismaClient instances.
