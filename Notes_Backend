@@ -15,3 +15,9 @@ In next you can make a component async and do async operations in it.
 
 # For creating Backend. The route must be created in a folder called api inside the app folder of root directory.    app->api->routeName[eg. user/admin/map etc]->route.ts  
 It would be a ts file and not a tsx file. 
+
+Better fetches.  You will see that in root dir we are sending a backend request to the server itself http://localhost:3000/api/user .
+getUserDetails runs on the server. This means you’re sending a request from a server back to the server. This doesnt makes any sense as both frontend and backend are on same server.
+# So we will define the route to send the db request direcctly beside the async component. 
+
+# IMPORTANT = When you are fetching and frontend and backend code is in same page then you must not use client component for safety purpose else your backend will run with your front end page.  eg. Use server components only. 
