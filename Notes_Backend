@@ -26,3 +26,14 @@ Prisma Singleton:
 In development, the command next dev clears Node.js cache on run. This in turn initializes a new PrismaClient instance each time due to hot reloading that creates a connection to the database. This can quickly exhaust the database connections as each PrismaClient instance holds its own connection pool.
 
 The solution in this case is to instantiate a single instance PrismaClient and save it on the globalThis object. Then we keep a check to only instantiate PrismaClient if it's not on the globalThis object otherwise use the same instance again if already present to prevent instantiating extra PrismaClient instances.
+
+# Server actions 
+What if you could do a simple function call (even on a client component  that would run on the server?)
+Under the hood, still an HTTP request would go out. But you would feel like you’re making a function call
+
+Server Actions are asynchronous functions that are executed on the server. They can be used in Server and Client Components to handle form submissions and data mutations in Next.js applications.
+https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations
+Benefits of server actions
+Single function can be used in both client and server components
+Gives you types of the function response on the frontend (very similar to trpc)
+Can be integrated seamlessly with forms (ref https://www.youtube.com/watch?v=dDpZfOQBMaU)
